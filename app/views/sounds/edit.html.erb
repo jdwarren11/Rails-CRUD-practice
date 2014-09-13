@@ -1,0 +1,20 @@
+<form action=<%= "/sounds/#{params[:id]}" %> method="post">
+    <input name="_method" type="hidden" value="put">
+
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="sound[title]">
+
+    <label for="soundcloud_url">Soundcloud URL:</label>
+    <input type="text" id="soundclound_url" name="sound[soundclound_url]">
+
+    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+    <input type="submit" value="submit">
+</form>
+<form method="post" action="<%= "/sounds/#{@sound.id}" %>" >
+    <input type="hidden" name="_method" value="delete">
+<!-- 
+    cant do method=delete but can put in additional input with name "_method" <- rails thingy and value=delete -->
+    <input type="submit" name="delete">
+    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+</form>

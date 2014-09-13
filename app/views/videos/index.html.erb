@@ -1,6 +1,20 @@
-<h2>All Videos:</h2>
+<h1>All Videos:</h1>
+
 <ul>
 <% @videos.each do |video| %>
-<li><%= link_to video.title, "/videos/#{video.id}" %></li>
+    <li><%= link_to video.title, "/videos/#{video.id}" %></li>
 <% end %>
 </ul>
+
+<!-- <form action="/videos" method="post">
+    <h3>Create New Video:</h3>
+    <label for="title">Name:</label>
+    <input type="text" name="video[name]" />
+    <br />
+    <label for="youtube_id">URL:</label>
+    <input type="text" name="video[url]" />
+
+    <button>Submit</button>
+
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+</form> -->

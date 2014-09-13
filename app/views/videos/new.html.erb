@@ -8,7 +8,7 @@
     <label for='youtube_id'>Youtube ID:</label>
     <input type='text' id='youtube_id' name='video[youtube_id]'>
 
-    <input type='authenticity_token' value='<%= form_authenticity_token %>' type='hidden'>
+    <input name='authenticity_token' value='<%= form_authenticity_token %>' type='hidden'>
 
     <input type='submit' value='submit'>
 </form>
